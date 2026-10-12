@@ -46,20 +46,27 @@ public class Macotas {
             return;
         }
     }
+    int valoredad=12000;
+    public int getValoredad() {
+        return valoredad;
+    }
     int valorConsulta;
     public int getValorConsulta() {
+
 
         if (peso < 10)
         {valorConsulta = 35000;}
 
-        else if (peso > 10)
+        else if (peso < 24)
         {
         valorConsulta = 45000;}
 
         if (peso > 25 )
-        {valorConsulta  =45000;}
-        else if(edad > 8 ){
-            valorConsulta  =45000 + 12000;
+        {valorConsulta  =55000;
+        }
+
+        if (edad > 8){
+            valorConsulta = valoredad + valorConsulta;
         }
         return valorConsulta;
     }
